@@ -1,11 +1,7 @@
-# 目次
-
-
-
-# 1-1 openpyxl とは
+# 2-1 openpyxl とは
 Python から Excel ファイルを操作可能な Python 製のソフトウェアです
 
-# 1-2 Python で Excel 操作ができるソフトウェア一覧
+# 2-2 Python で Excel 操作ができるソフトウェア一覧
 
 * python-xlsx 
   * https://github.com/python-excel/xlrd
@@ -24,7 +20,7 @@ Python から Excel ファイルを操作可能な Python 製のソフトウェ�
 
 他の 3 つのソフトウェアと違い Excel 本体が必要であるが、Excel で使用できる機能は網羅している
 
-# 1-3 ファイルの作成と保存とロード
+# 2-3 ファイルの作成と保存とロード
 ## ファイルの作成には Workbook を import する
 
 ```
@@ -78,7 +74,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 終わったら exit() で終了する
 
-# 1-4 シートの操作
+# 2-4 シートの操作
 ## シートを作成する
 ※ファイル作成時はデフォルトでシートが作成されている
 
@@ -156,7 +152,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ```
 
-# 1-5 セルの操作
+# 2-5 セルの操作
 この後はセルにデータの投入と参照について学びます。
 
 フォントや色などの装飾については、公式ドキュメントを参照ください。
@@ -219,7 +215,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> wb.save("sample.xlsx")
 >>> exit()
 ```
-## [Try] List データを書き込む
+## 2-6 [Try] List データを書き込む
 1. Python 起動からシートの選択まで実施する
 
 ```
@@ -247,7 +243,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ファイルを開いて閲覧可能なら開いて確認する
 
-## [Try] 末尾にデータを追加する
+## 2-7 [Try] 末尾にデータを追加する
 1. Python 起動からシートの選択まで実施する
 
 ```
