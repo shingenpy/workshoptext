@@ -1,18 +1,24 @@
-# Python のインストール方法
+# 目次
+
+
+# 1-1
+* Python のインストール方法
 ## windows 
 
 
 ## linux or Mac
 
 
-# Tutorial 用のディレクトリの作成
+# 1-2
+* Tutorial 用のディレクトリの作成
 
 ```
  # mkdir 20200420_works
  # cd 20200420_works
 ```
 
-# openpyxl のインストール
+# 1-3 
+* openpyxl のインストール
 ## 仮想化
 Python の仮想化機構を使用して、本プロジェクト用の仮想化環境を作成する
 
