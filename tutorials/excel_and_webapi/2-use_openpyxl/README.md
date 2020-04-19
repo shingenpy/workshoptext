@@ -4,16 +4,16 @@ Python から Excel ファイルを操作可能な Python 製のソフトウェ�
 # 1-2 Python で Excel 操作ができるソフトウェア一覧
 
 * python-xlsx 
- * https://github.com/python-excel/xlrd
- * https://github.com/python-excel/xlwt
- * https://github.com/python-excel/xlutils
+** https://github.com/python-excel/xlrd
+** https://github.com/python-excel/xlwt
+** https://github.com/python-excel/xlutils
 
 * XlsxWriter
- * https://xlsxwriter.readthedocs.io/getting_started.html
+** https://xlsxwriter.readthedocs.io/getting_started.html
 書き込み専用である
 
 * Xlwing
- * https://www.xlwings.org/
+** https://www.xlwings.org/
 有償版、無償版あり
 他の 3 つのソフトウェアと違い Excel 本体が必要であるが、Excel で使用できる機能は網羅している
 
