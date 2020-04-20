@@ -265,4 +265,5 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 上記方法は想定しない箇所に追記する場合があります。
 
-
+[戻る](../1-setup/README.md)
+[進む](../3-create_method/README.md)
