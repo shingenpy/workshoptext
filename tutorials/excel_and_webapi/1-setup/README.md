@@ -13,6 +13,8 @@
 
 # 1-2 Create directory to use this tutorial
 
+まずは、本プロジェクト用のディレクトリを作成する
+
 ```
  # mkdir 20200420_works
  # cd 20200420_works

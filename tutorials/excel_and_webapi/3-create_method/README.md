@@ -2,6 +2,8 @@
 この関数はファイルの作成を行う
 
 とりあえず、それっぽく書いてみます。
+
+init.py
 ```
 from openpyxl import Workbook
 
@@ -18,6 +20,7 @@ if __name__ == "__main__":
 
 ファイルがあるかどうかの判定を行う
 
+init.py
 ```
 from openpyxl import Workbook
 import os 
@@ -38,6 +41,8 @@ if __name__ == "__main__":
 この関数はデータを取得する
 
 とりあえず、それっぽいものを作る
+
+get.py
 ```
 from openpyxl import load_workbook
 DATAPATH = "data.xlsx"
@@ -55,6 +60,8 @@ def get_data(index_number):
 - c.一次元以上のデータを扱えない
 
 まずは、a b を対応する。
+
+get.py
 ```
 from openpyxl import load_workbook
 import os
@@ -76,6 +83,7 @@ c　については、必要になったら変更するようにする
 # 3-3 [Try] データを投入用の関数を作成する
 この関数はデータを末尾に追加する
 
+add.py 
 ```
 def set_data(name):
     if os.path.exists(DATAPATH):
@@ -85,10 +93,47 @@ def set_data(name):
         exit()
     ws = wb.active
     ws.append([name])
+    wb.save(DATAPATH)
 ```
 
 # 3-4 [Try] コマンドラインからデータを投入できる python スクリプトを作成する
+まずは、コマンドラインから情報を取得するスクリプトを書く
+
+exadd.py
+```
+import 
+
+args = sys.argv
+
+if __name__ == '__main__':
+    print(args)
+```
+
+実行してみよう
+
+```
+ (env) # python exadd.py 1 a b 3
+ ['exedd.py', '1', 'a', 'b', '3']
+```
+
+- 全引数はスクリプトを含めてリストとして返される
+- 数値・文字列にかかわらず、文字列として返される
 
 
+次に先ほど作った add.py を再利用する
+
+```
+import sys
+import add
+
+args = sys.argv
+
+if __name__ == '__main__':
+    print(args[1])
+    add.set_data(args[1])
+```
+
+ちなみに、Python でコマンドを作成する場合以下ソリューションが便利である
+* [argparse](https://docs.python.org/ja/3/howto/argparse.html)
 
 [前のページへ戻る](../2-use_openpyxl/README.md)
