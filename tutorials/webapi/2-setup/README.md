@@ -1,5 +1,3 @@
-# 目次
-
 # 2-1 Create directory to use this tutorial
 
 まずは、本プロジェクト用のディレクトリを作成する

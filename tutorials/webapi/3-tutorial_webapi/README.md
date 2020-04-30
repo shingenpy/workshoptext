@@ -1,6 +1,8 @@
 # 3-1 HelloWorld
 
-まずは以下を写経してください。
+まずは、HelloWorld を表示する WebAPI を作成します
+
+以下を写経してください。
 
 ファイル名は main.py で作成してください。
 
@@ -23,13 +25,19 @@ def read_root():
 Application startup complete
 ```
 
-ウェブブラウザでアクセスしてみます。
+Application startup complete と表示されたらOKです
 
-http://localhost:8000/ にアクセスしてみてくださ。
+ウェブブラウザでアクセスしてみます
 
-{"Hello":"World"} と表示されたら成功です
+http://localhost:8000/ にアクセスしてみてください
 
-この後はデータにアクセスしてみます
+```
+{"Hello":"World"} 
+```
+
+と表示されたら成功です
+
+この後は各種データにアクセスしてみます
 
 # 3-2 List
 まずは Python のリストデータにアクセスします
@@ -48,7 +56,11 @@ def read_from_index(item_id: int):
 
 http://localhost:8000/id/0 にアクセスしてみてください。
 
-{"item_id":0,"q":"apple"} と表示されたら成功です。
+```
+{"item_id":0,"q":"apple"} 
+```
+
+と表示されたら成功です。
 
 この後はデータにアクセスしてみます
 
@@ -69,10 +81,14 @@ def read_from_color(color_name: str):
 
 http://localhost:8000/color/yellow にアクセスしてみてください。
 
-{"color":"yellow","q":"lemon"} と表示されたら成功です。
+```
+{"color":"yellow","q":"lemon"}
+```
+
+と表示されたら成功です。
 
 # 3-4 Model 
-DataModel を使います
+pydantic モジュールの DataModel を使います
 
 ※本当は dataclass を使う予定でしたが、dataclass は  python3.6 では標準ではないため 使ってません
 

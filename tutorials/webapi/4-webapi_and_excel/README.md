@@ -1,3 +1,7 @@
+# WebAPI と Excel 
+この章では、前回の勉強会で作成した Python ファイルを使用して、FastAPI と連携します。
+簡単な Get リクエストと Put メソッドを追加します
+
 # Get Method
 
 excel からデータを取得できることを確認する

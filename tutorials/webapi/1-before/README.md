@@ -10,11 +10,13 @@ import os
 
 DATAPATH = "data2.xlsx"
 
+
 def init():
     if not os.path.exists(DATAPATH):
         Workbook().save(DATAPATH)
     else:
         print("File Exists")
+
 
 def get_name_from_index(index_number: int) -> str:
     if os.path.exists(DATAPATH):
@@ -27,31 +29,39 @@ def get_name_from_index(index_number: int) -> str:
         exit()
     return ws["A{}".format(index_number)].value
 
+
 def get_data_from_name(name) -> dict:
     if os.path.exists(DATAPATH):
         wb = load_workbook(DATAPATH)
     else:
         print("Excel file not exists")
         exit()
-    
+
     ws = wb.active
 
-    for i in range(1,ws.max_row+1):
+    for i in range(1, ws.max_row+1):
         if ws["A{}".format(i)].value == name:
-            return {"name": ws["A{}".format(i)].value,"age": ws["B{}".format(i)].value,"gender": ws["C{}".format(i)].value}
-    return {"message":"Nothing"}
-    
+            return {
+                "name": ws["A{}".format(i)].value,
+                "age": ws["B{}".format(i)].value,
+                "gender": ws["C{}".format(i)].value
+            }
+    return {"message": "Nothing"}
+
+
 def insert_data(name: str, age: int, gender: str):
     if os.path.exists(DATAPATH):
         wb = load_workbook(DATAPATH)
     else:
         print("Excel file not exists")
         exit()
-    
+
     ws = wb.active
     ws.append([name, age, gender])
     wb.save(DATAPATH)
 ```
+
+※ frlake8 と autopep8 を使ってフォーマットはきれいにしています
 
 今回はすべて関数で書きましたが、前回の課題で提出いただいた
 [excel_meibo.py](https://gist.github.com/k0syam/cb7076d58bc4061434cd94584025a9e9) 
