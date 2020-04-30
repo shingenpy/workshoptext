@@ -87,3 +87,5 @@ TypeError: must be str, not int
 ```
 
 このように、型ヒントを追加するだけで簡単なデータバリデーションをすることが可能です。
+
+[next](../2-setup/README.md)
